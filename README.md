@@ -1,5 +1,8 @@
-# angel daniel lozano velasco
-# 100 palabras de tu aplicacion
+# Nombre
+## Maria de los angeles Cedeño Castillo
+### 100 palabras de lo que hace su aplicacion
+
+#Bakup base de datos
 
 ```sql
 -- phpMyAdmin SQL Dump
@@ -152,5 +155,4 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
 ```

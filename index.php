@@ -65,6 +65,9 @@
       <div class="carousel-item">
         <img src="labios.jpeg" class="d-block w-100" alt="pez_murcielago">
       </div>
+
+
+
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carruselAnimales" data-bs-slide="prev">
       <span class="carousel-control-prev-icon"></span>
@@ -73,6 +76,94 @@
       <span class="carousel-control-next-icon"></span>
     </button>
   </div>
+  
+
+
+<!-- Button trigger modal -->
+<div class = "col text-center">
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        
+      <table class="table table-dark table-striped-columns">
+
+
+<?php
+include_once "Controlador/conexion.php";
+$conexion = new Conexion();
+$conexion = $conexion->conectar();
+if ($conexion){
+  $sql = "SELECT * FROM `registropersonas`";
+  $consulta = $conexion-> prepare($sql);
+  $consulta->execute();
+  $i = 0;
+  while($fila=$consulta -> fetch(PDO::FETCH_ASSOC )){
+   $i +=1; 
+  
+?>  
+
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido</th>
+      <th scope="col">Edad</th>
+      <th scope="col">Correo</th>
+      <th scope="col">Telefono</th>
+      <th scope="col">Editar</th>
+      <th scope="col">Eliminar</th>
+
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><?php $i?></th>
+      <td><?php echo $fila["Nombre"];?></td>
+      <td><?php echo $fila["Apellido"];?></td>
+      <td><?php echo $fila["Edad"];?></td>
+      <td><?php echo $fila["Correo"];?></td>
+      <td><?php echo $fila["Telefono"];?></td>
+      <td><?php echo $fila["Nombre"];?></td>
+      <button type="button" class="btn btn-primary">Editar</button>
+      <td></td>
+    </tr>
+    
+  </tbody>
+  <?php
+  }}
+  else {
+    echo"Error al conectar a la base de datos.";
+  }
+
+  ?>
+</table>
+      
+  </div>
+ 
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 
   <!-- Información principal -->
   <div class="container mt-4">
