@@ -1,7 +1,53 @@
 # Nombre
 ## angel daniel lozano velasco
 ### 100 palabras de lo que hace su aplicacion
+He creado una página web que incluye un archivo index para la interfaz, un controlador que gestiona la lógica, una base de datos para almacenar la información, y archivos JavaScript para la interacción del usuario. El desarrollo se realizó en Visual Studio Code y utiliza un lenguaje CRUD (Crear, Leer, Actualizar, Eliminar), permitiendo gestionar datos dinámicamente. El usuario interactúa desde el navegador, JS envía datos al controlador, que luego consulta o modifica la base de datos. Esta estructura permite una gestión eficiente de la información y un flujo claro entre el cliente, el servidor y la base de datos.
+1. Entorno de Desarrollo
+	•	Visual Studio Code
+	•	Herramienta principal para escribir y organizar el código: HTML, CSS, JavaScript, lógica del controlador y conexión a base de datos.
 
+⸻
+
+2. Interfaz de Usuario (Cliente)
+	•	index.html
+	•	Página principal que se muestra al usuario.
+	•	Contiene la estructura y diseño inicial de la interfaz.
+	•	Archivos JavaScript (ej: script.js)
+	•	Manejan la lógica de interacción en el navegador (eventos, formularios, botones, etc.).
+	•	Recogen datos del usuario y los envían al servidor.
+
+⸻
+
+3. Navegador del Usuario
+	•	Ejecuta el archivo index.html y los scripts JS.
+	•	Permite la interacción del usuario con la interfaz.
+
+⸻
+
+4. Controlador (Lógica del Servidor)
+	•	Recibe peticiones desde JS (por ejemplo, a través de fetch, XMLHttpRequest, o frameworks).
+	•	Implementa operaciones CRUD:
+	•	Crear: Insertar nuevos datos en la base de datos.
+	•	Leer: Consultar datos existentes.
+	•	Actualizar: Modificar datos existentes.
+	•	Eliminar: Borrar datos.
+	•	Retorna respuestas (éxito, error, datos) al cliente.
+
+⸻
+
+5. Base de Datos
+	•	Almacena la información dinámica gestionada por la aplicación.
+	•	Responde a las consultas y cambios solicitados por el controlador.
+
+⸻
+
+🔁 Flujo de Datos
+	1.	El usuario accede a index.html desde el navegador.
+	2.	El navegador ejecuta los scripts JS, que capturan acciones del usuario.
+	3.	Los JS envían datos o peticiones al controlador (vía HTTP).
+	4.	El controlador procesa la petición y accede a la base de datos si es necesario.
+	5.	La base de datos responde con la información.
+	6.	El controlador devuelve los resultados al navegador, que los muestra al usuario.
 #Bakup base de datos
 
 ```sql
