@@ -1,0 +1,33 @@
+package com.mycompany.taller9;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Daniel
+ */
+public class Taller9 {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Entrada de datos
+        System.out.print("Ingrese la base (a): ");
+        int a = sc.nextInt();
+
+        System.out.print("Ingrese el exponente (b): ");
+        int b = sc.nextInt();
+
+        // Caso especial: exponente 0
+        int resultado = 1;
+
+        for (int i = 1; i <= b; i++) {
+            resultado *= a;
+        }
+
+        System.out.println("El resultado de " + a + " elevado a la " + b + " es: " + resultado);
+
+        sc.close();
+    }
+}
+    

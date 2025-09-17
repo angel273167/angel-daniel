@@ -1,0 +1,37 @@
+package com.mycompany.taller3;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Daniel
+ */
+public class Taller3 {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingrese la cantidad de niños: ");
+        int N = sc.nextInt();
+        
+        int sumapares = 0;
+        int conteopares = 0;
+        int sumainpares = 0;
+        int conteoinpares = 0;
+        
+        for(int i = 1; i <=N; i++){
+            if(i % 2 == 0) {
+                sumapares +=i;
+                conteopares++;
+                }
+        }
+
+        double promedioManzana = conteopares > 0 ? (double) sumapares / conteopares : 0;
+        double promedioNaranja = conteoinpares > 0 ? (double) sumainpares / conteoinpares : 0;
+
+        System.out.println("Promedio de números que reciben manzana: " + promedioManzana);
+        System.out.println("Promedio de números que reciben naranja: " + promedioNaranja);
+
+        sc.close();
+            }
+        }
+    

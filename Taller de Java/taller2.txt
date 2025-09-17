@@ -1,0 +1,36 @@
+package com.mycompany.taller2;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Daniel
+ */
+public class Taller2 {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+           System.out.print("Ingrese el numero N para calcular el factorial: ");
+        int N = sc.nextInt();
+
+        int factorial = 1;
+
+        for (int i = 1; i <= N; i++) {
+            factorial *= i;
+
+            // Verificación temprana: si ya supera 10,000, salimos
+            if (factorial > 10000) {
+                System.out.println("La receta es imposible");
+                 sc.close();
+                  return;
+                
+            }
+        }
+
+        System.out.println("El factorial de " + N + " es: " + factorial);
+
+        sc.close();
+    }
+
+        
+    }

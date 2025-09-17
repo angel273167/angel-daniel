@@ -1,0 +1,31 @@
+package com.mycompany.taller5;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Daniel
+ */
+public class Taller5 {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Ingrese el número para mostrar su tabla de multiplicar: ");
+        int N = sc.nextInt();
+
+        System.out.println("Tabla del " + N + " (solo múltiplos de 4):");
+
+        for (int i = 1; i <= 10; i++) {
+            int resultado = N * i;
+
+            if (resultado % 4 == 0) {
+                System.out.println(N + " x " + i + " = " + resultado);
+            }
+        }
+
+        sc.close();
+    }
+}
+    
+

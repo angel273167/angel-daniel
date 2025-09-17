@@ -1,0 +1,29 @@
+package com.mycompany.taller;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Daniel
+ */
+public class Taller {
+
+    public static void main(String[] args) {
+         Scanner sc = new Scanner(System.in);
+         System.out.print("Escribe un numero N: ");
+        int N = sc.nextInt();
+        int suma = 0;
+
+        // Sumar los múltiplos de 3
+        for (int i = 1; i <= N; i++) {
+            if (i % 3 == 0) {
+                suma += i;
+            }
+        }
+
+        // Mostrar el resultado
+        System.out.println("La suma de los múltiplos de 3 entre 1 y " + N + " es: " + suma);
+
+
+    }
+}

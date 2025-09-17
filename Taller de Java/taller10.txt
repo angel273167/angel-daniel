@@ -1,0 +1,32 @@
+package com.mycompany.taller10;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Daniel
+ */
+public class Taller10 {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Ingrese el numero de tramos: ");
+        int N = sc.nextInt();
+
+        int altura = 0;
+
+        for (int i = 1; i <= N; i++) {
+            if (i % 2 == 0) {
+                altura -= i; 
+            } else {
+                altura += i; 
+            }
+        }
+
+        System.out.println("La altura final de la montaña rusa es: " + altura);
+
+        sc.close();
+    }
+}
+    

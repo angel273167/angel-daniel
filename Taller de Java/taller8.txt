@@ -1,0 +1,48 @@
+package com.mycompany.taller8;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Daniel
+ */
+public class Taller8 {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Ingresa un numero para crear la contraseña: ");
+        int numero = sc.nextInt();
+
+        int pares = 0;
+        int impares = 0;
+
+        int n = Math.abs(numero); 
+
+       
+        String numStr = Integer.toString(n);
+
+        for (int i = 0; i < numStr.length(); i++) {
+            char c = numStr.charAt(i);      
+            int digito = Character.getNumericValue(c); 
+
+            if (digito % 2 == 0) {
+                pares++;
+            } else {
+                impares++;
+            }
+        }
+
+        
+        System.out.println("Cantidad de dígitos pares: " + pares);
+
+        if (pares > impares) {
+            System.out.println("Contraseña: Aceptada");
+        } else {
+            System.out.println("Contraseña: Rechazada");
+        }
+
+        sc.close();
+    }
+}
+     

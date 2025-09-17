@@ -1,0 +1,27 @@
+package com.mycompany.taller6;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Daniel
+ */
+public class Taller6 {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Ingrese la cantidad de escalones: ");
+        int N = sc.nextInt();
+
+        int bloquesTotales = 0;
+
+        for (int i = 1; i <= N; i++) {
+            bloquesTotales += i * i; // i² bloques por escalón
+        }
+
+        System.out.println("Pepito necesita " + bloquesTotales + " bloques para construir la escalera.");
+
+        sc.close();
+    }
+}
